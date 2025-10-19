@@ -1,0 +1,42 @@
+# Dependencies
+/node_modules
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.pnpm-error.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example # Keep example for reference
+
+# Build artifacts
+/dist
+/build
+/coverage
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Test reports
+/junit.xml
+
+# npm package manager files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Miscellaneous
+*.log
+*.tmp
