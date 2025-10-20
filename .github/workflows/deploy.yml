@@ -22,9 +22,13 @@ jobs:
           script: |
             if [ -d ~/node-js-devops-exercise-1 ]; then
               cd ~/node-js-devops-exercise-1
+              echo "Updating code..."
               git pull origin main
+              echo "Updated code"
             else
+            echo "Pulling repo..."
               git clone https://github.com/wasya243/node-js-devops-exercise-1.git
+              echo "Pulled repo"
               cd ~/node-js-devops-exercise-1
             fi
 
@@ -34,7 +38,9 @@ jobs:
             if [ $? -eq 0 ]; then
               echo "Restarting existing PM2 process..."
               pm2 restart hello-server
+              echo "Restarted process"
             else
               echo "Starting new PM2 process..."
               pm2 start index.js --name hello-server
+              echo "Started process"
             fi
