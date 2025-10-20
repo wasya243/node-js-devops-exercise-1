@@ -20,9 +20,8 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            if [ -d "~/node-js-devops-exercise-1" ]; then
+            if [ -d ~/node-js-devops-exercise-1 ]; then
               cd ~/node-js-devops-exercise-1
-              git reset --hard
               git pull origin main
             else
               git clone https://github.com/wasya243/node-js-devops-exercise-1.git
