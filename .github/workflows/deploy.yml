@@ -27,8 +27,9 @@ jobs:
               git clone https://github.com/wasya243/node-js-devops-exercise-1.git
               cd ~/node-js-devops-exercise-1
             fi
+
             npm install
-            
+
             pm2 describe hello-server > /dev/null
             if [ $? -eq 0 ]; then
               echo "Restarting existing PM2 process..."
@@ -37,5 +38,3 @@ jobs:
               echo "Starting new PM2 process..."
               pm2 start index.js --name hello-server
             fi
-
-            pm2 save
