@@ -32,7 +32,9 @@ jobs:
               cd ~/node-js-devops-exercise-1
             fi
 
+            echo "Installing deps..."
             npm install
+            echo "Installed deps"
 
             pm2 describe hello-server > /dev/null
             if [ $? -eq 0 ]; then
